@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { nextTick } from 'process';
 import { AstronaughtDataService } from '../astronaught-data.service';
 @Component({
   selector: 'app-astronaughts',
@@ -13,7 +14,8 @@ export class AstronaughtsComponent implements OnInit {
     this.asDataService.getAstronaughts().subscribe(data=>{
       this.astronaughtArray = data;
       console.log("Astronaught data: ", this.astronaughtArray);
-    })
+      //this.astronaughtArray.next();
+    });
   }
 
 }
