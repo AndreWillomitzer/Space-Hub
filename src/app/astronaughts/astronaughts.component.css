@@ -1,0 +1,29 @@
+#astronaughtContainer{
+    display: flex;
+    font-family: 'Fira Code', monospace;
+    /* font-size: 1rem; */
+    flex-wrap:wrap;
+    justify-content: space-between;
+    
+    
+}
+#astroCard{
+    border: 2px solid white;
+    background-color:#1C3738;
+    color: seashell;
+    width: 32%;
+  padding-bottom: 12px;
+  margin-bottom: 2%; /* (100-32*3)/2 */
+}
+h4{
+    font-size: 1.25rem;
+}
+img{
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+}
+p,h4,img{
+    margin: 0.4em;
+    
+}

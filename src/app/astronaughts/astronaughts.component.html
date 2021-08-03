@@ -1,5 +1,15 @@
-
- 
- <p>Does this page work?</p>
+<div *ngIf="astronaughtArray else loading" id="astronaughtContainer">
+    <div *ngFor="let astronaught of astronaughtArray.results" id="astroCard">
+        
+            <h4>{{astronaught.name}}</h4>
+            <hr>
+            <img [src]="astronaught.profile_image">
+            <p>{{astronaught.bio}}</p>
+    
+    </div>
+</div>
+<ng-template #loading>
+    <div>Loading Astronaughts...</div>
+</ng-template>
 
 
