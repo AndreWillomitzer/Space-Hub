@@ -4,13 +4,14 @@
     /* font-size: 1rem; */
     flex-wrap:wrap;
     justify-content: space-between;
-    
-    background-color:#414A6D;
+    background-color: white;
     
 }
 #astroCard{
+    background-color:#414A6D;
     /* background-color:#383158; */
     border: 2px solid white;
+    
     color: #E8F1F2;
     width: 32%;
   padding-bottom: 12px;
