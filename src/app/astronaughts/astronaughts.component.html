@@ -3,7 +3,9 @@
         
             <h4>{{astronaught.name}}</h4>
             <hr>
-            <img [src]="astronaught.profile_image">
+            <div id="imgDiv">
+                <img [src]="astronaught.profile_image">
+            </div>
             <!-- <p>{{astronaught.age}}</p> -->
             <p>Date of Birth: {{astronaught.date_of_birth}}</p>
             <p>Status: {{astronaught.status.name}}</p>

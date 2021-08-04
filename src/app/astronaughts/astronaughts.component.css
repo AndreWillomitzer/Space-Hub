@@ -5,27 +5,40 @@
     flex-wrap:wrap;
     justify-content: space-between;
     background-color: white;
-    
+    background-image: url("../../assets/pexels-olenka-sergienko-5345033.jpg");
 }
 #astroCard{
     background-color:#414A6D;
     /* background-color:#383158; */
     border: 2px solid white;
-    
+    flex: 1 0 21%;
+    margin: 5px;
+    /*flex: 33%*/
     color: #E8F1F2;
-    width: 32%;
+    /* width: 32%; */
   padding-bottom: 12px;
-  margin-bottom: 2%; /* (100-32*3)/2 */
-  margin-top: 2%;
+ /*  margin-bottom: 2%; 
+  margin-top: 2%; */
 }
 h4{
     font-size: 1.25rem;
 }
 img{
-    width: 150px;
-    height: 200px;
-    object-fit: cover;
+    max-height: 200px;
+    width: auto;
+    max-width: 75%;
+    
 }
+@media screen and (max-width: 992px) {
+    #astroCard {
+      flex: 50%;
+    }
+  }
+@media screen and (max-width: 600px) {
+    #astronaughtContainer {
+      flex-direction: column;
+    }
+  }
 a{
     color: white;
     font-family: 'Mina', sans-serif;
