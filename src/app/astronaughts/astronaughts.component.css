@@ -5,12 +5,13 @@
     flex-wrap:wrap;
     justify-content: space-between;
     
+    background-color:#414A6D;
     
 }
 #astroCard{
+    /* background-color:#383158; */
     border: 2px solid white;
-    background-color:#1C3738;
-    color: seashell;
+    color: #E8F1F2;
     width: 32%;
   padding-bottom: 12px;
   margin-bottom: 2%; /* (100-32*3)/2 */
