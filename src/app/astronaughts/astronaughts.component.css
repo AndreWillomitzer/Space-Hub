@@ -26,7 +26,12 @@ img{
     height: 200px;
     object-fit: cover;
 }
-p,h4,img{
+a{
+    color: white;
+    font-family: 'Mina', sans-serif;
+
+}
+p,h4,img, a{
     margin: 0.4em;
     
 }
