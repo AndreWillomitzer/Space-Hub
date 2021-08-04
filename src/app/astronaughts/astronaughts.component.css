@@ -11,14 +11,12 @@
     background-color:#414A6D;
     /* background-color:#383158; */
     border: 2px solid white;
-    flex: 1 0 21%;
-    margin: 5px;
-    /*flex: 33%*/
+    flex: 33%;
     color: #E8F1F2;
     /* width: 32%; */
   padding-bottom: 12px;
- /*  margin-bottom: 2%; 
-  margin-top: 2%; */
+  margin-bottom: 2%; /* (100-32*3)/2 */
+  margin-top: 2%;
 }
 h4{
     font-size: 1.25rem;
