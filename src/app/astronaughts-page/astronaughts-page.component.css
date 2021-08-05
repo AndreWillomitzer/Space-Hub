@@ -1,0 +1,12 @@
+.bg {
+  background-color: white;
+  /* background-image: url("../../assets/pexels-olenka-sergienko-5345033.jpg"); */
+}
+
+.container {
+  padding: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}

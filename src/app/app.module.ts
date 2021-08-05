@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { AstronaughtsComponent } from './astronaughts/astronaughts.component';
+import { AstronaughtsPageComponent } from './astronaughts-page/astronaughts-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    AstronaughtsComponent
+    AstronaughtsComponent,
+    AstronaughtsPageComponent
   ],
   imports: [
     BrowserModule,

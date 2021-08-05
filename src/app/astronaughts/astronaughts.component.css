@@ -1,51 +1,60 @@
-#astronaughtContainer{
-    display: flex;
-    font-family: 'Fira Code', monospace;
-    /* font-size: 1rem; */
-    flex-wrap:wrap;
-    justify-content: space-between;
-    background-color: white;
-    background-image: url("../../assets/pexels-olenka-sergienko-5345033.jpg");
-}
-#astroCard{
-    background-color:#414A6D;
-    /* background-color:#383158; */
-    border: 2px solid white;
-    flex: 33%;
-    color: #E8F1F2;
-    /* width: 32%; */
-  padding-bottom: 12px;
-  margin-bottom: 2%; /* (100-32*3)/2 */
-  margin-top: 2%;
-}
-h4{
-    font-size: 1.25rem;
-}
-img{
-    max-height: 200px;
-    width: auto;
-    max-width: 75%;
-    
-}
-@media screen and (max-width: 992px) {
-    #astroCard {
-      flex: 50%;
-    }
-  }
-@media screen and (max-width: 600px) {
-    #astronaughtContainer {
-      flex-direction: column;
-    }
-  }
-a{
-    color: white;
-    font-family: 'Mina', sans-serif;
+#astroCard {
+  border: 1px rgb(27, 189, 238) solid;
+  margin: 1.5rem;
+  max-width: 250px;
+  /* explanation below */
+  flex: 1 0 21%;
 
 }
-p,h4,img, a{
-    margin: 0.4em;
-    
+
+#imgDiv {
+  text-align: center;
 }
-p{
-    font-family: 'Mina', sans-serif;
+
+#imgDiv img {
+  object-fit: cover;
+  width: 250px;
+  height: 300px;
+}
+
+p {
+  font-family: 'Mina', sans-serif;
+}
+
+.astronaught-name {
+  text-align: center;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.astronaught-bio {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.astronaught-bio:hover {
+  overflow: visible;
+  white-space: normal;
+}
+
+.tooltip {
+  width: 60%;
+  visibility: hidden;
+  background-color: #fff;
+  padding: 20px;
+  -webkit-box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+
+h1:hover+.tooltip {
+  visibility: visible;
+  transition: opacity 0.5s ease;
+  opacity: 1;
 }
