@@ -11,6 +11,7 @@ import { SearchPipe } from './search.pipe';
 import { FormsModule } from '@angular/forms';
 
 import { SearchResultComponent } from './search-result/search-result.component';
+import { ImageGalleryComponent } from './image-gallery/image-gallery.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SearchResultComponent } from './search-result/search-result.component';
     AstronaughtsComponent,
     AstronaughtsPageComponent,
     SearchPipe,
-    SearchResultComponent
+    SearchResultComponent,
+    ImageGalleryComponent
   ],
   imports: [
     BrowserModule,
