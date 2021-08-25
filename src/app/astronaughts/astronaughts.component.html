@@ -1,20 +1,32 @@
-<div *ngFor="let astronaught of astronaughtArray.results" id="astroCard">
-  <div id="imgDiv">
-    <img [src]="astronaught.profile_image">
+<div class="bg">
+  <div id="inputDiv">
+    <input type="search" [(ngModel)] = astroName name="SearchPipe" placeholder="Search Astronauts">
   </div>
-  <!-- <p>{{astronaught.age}}</p> -->
-  <div class='card-body'>
-    <h3 class="astronaught-name">{{astronaught.name}}</h3>
-    <p>Date of Birth: {{astronaught.date_of_birth}}</p>
-    <p>Status: {{astronaught.status.name}}</p>
-    <p>Nationality: {{astronaught.nationality}}</p>
-    <a *ngIf="astronaught.twitter" href="{{astronaught.twitter}}">
-      Twitter
-    </a>
-
-    <p class='astronaught-bio'>{{astronaught.bio}}</p>
+  <div class="container" *ngIf="astronaughtArray else loading">
+    <div *ngFor="let astronaught of astronaughtArray.results | SearchPipe: astroName" id="astroCard">
+      <div id="imgDiv">
+        <img [src]="astronaught.profile_image">
+      </div>
+      <!-- <p>{{astronaught.age}}</p> -->
+      <div class='card-body'>
+        <h3 class="astronaught-name">{{astronaught.name}}</h3>
+        <p>Date of Birth: {{astronaught.date_of_birth | date }}</p>
+        <p>Status: {{astronaught.status.name}}</p>
+        <p>Nationality: {{astronaught.nationality}}</p>
+        <a *ngIf="astronaught.twitter" href="{{astronaught.twitter}}">
+          Twitter
+        </a>
+        <p class="bioClick">Hover To Read More</p>
+        
+        
+          <p (mouseover)="hoverElement = astronaught.bio" (mouseleave)="hoverElement = null" (click)="clickEvent()" [ngClass]="hoverElement === astronaught.bio ? 'astronaught-bio && expand' : 'astronaught-hidden-bio'" [id]="astronaught.id">{{astronaught.bio}}</p>
+        
+          
+      </div>
+    </div>
   </div>
   <ng-template #loading>
     <div>Loading Astronaughts...</div>
   </ng-template>
 </div>
+  

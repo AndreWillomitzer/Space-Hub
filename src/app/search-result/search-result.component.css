@@ -1,0 +1,79 @@
+.container {
+    padding: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+  }
+  
+#astroCard {
+    border: 1px #414A6D solid;
+    margin: 1.5rem;
+    max-width: 250px;
+    /* explanation below */
+    flex: 1 0 21%;
+    background-color: #414A6D;
+  }
+  
+  #imgDiv {
+    text-align: center;
+  }
+  
+  #imgDiv img {
+    object-fit: cover;
+    width: 250px;
+    height: 300px;
+  }
+  
+  p {
+    font-family: 'Mina', sans-serif;
+  }
+  
+  .astronaught-name {
+    
+    font-family: 'Fira Code', monospace;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid white;
+    /* color: #383158; */
+    color: white;
+  }
+  
+  .card-body {
+    padding: 1rem;
+    padding-top: 0.25rem;
+    color: white;
+  }
+  
+  .astronaught-bio {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: 'Mina', sans-serif;
+  }
+  
+  .astronaught-bio:hover {
+    overflow: visible;
+    white-space: normal;
+  }
+  
+  .tooltip {
+    width: 60%;
+    visibility: hidden;
+    background-color: #fff;
+    padding: 20px;
+    -webkit-box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  
+  h1:hover+.tooltip {
+    visibility: visible;
+    transition: opacity 0.5s ease;
+    opacity: 1;
+  }
+  

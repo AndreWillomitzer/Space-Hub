@@ -7,18 +7,26 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { AstronaughtsComponent } from './astronaughts/astronaughts.component';
 import { AstronaughtsPageComponent } from './astronaughts-page/astronaughts-page.component';
+import { SearchPipe } from './search.pipe';
+import { FormsModule } from '@angular/forms';
+
+import { SearchResultComponent } from './search-result/search-result.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     AstronaughtsComponent,
-    AstronaughtsPageComponent
+    AstronaughtsPageComponent,
+    SearchPipe,
+    SearchResultComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
+      
   ],
   providers: [],
   bootstrap: [AppComponent]

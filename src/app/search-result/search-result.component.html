@@ -1,0 +1,23 @@
+<div class="container" *ngIf="filtered else loading">
+    <h1>Results for: &ldquo;{{searchQuery}}&rdquo;</h1>
+    <div *ngFor="let result of filtered" id="astroCard">
+        <div id="imgDiv">
+            <img [src]="result.profile_image">
+        </div>
+        <!-- <p>{{astronaught.age}}</p> -->
+        <div class='card-body'>
+            <h3 class="astronaught-name">{{result.name}}</h3>
+            <p>Date of Birth: {{result.date_of_birth | date }}</p>
+            <p>Status: {{result.status.name}}</p>
+            <p>Nationality: {{result.nationality}}</p>
+            <a *ngIf="result.twitter" href="{{result.twitter}}">
+                Twitter
+            </a>
+            
+            <p class='astronaught-bio'>{{result.bio}}</p>
+        </div>
+    </div>
+</div>
+<ng-template #loading>
+    <div>Loading Astronaughts...</div>
+</ng-template>
