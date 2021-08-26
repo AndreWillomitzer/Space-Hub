@@ -16,11 +16,16 @@
         <a *ngIf="astronaught.twitter" href="{{astronaught.twitter}}">
           Twitter
         </a>
-        <p class="bioClick">Hover To Read More</p>
+        <details>
+          <summary>
+            Click To Read More
+          </summary>
+          <p>{{astronaught.bio}}</p>
+        </details>
         
         
-          <p (mouseover)="hoverElement = astronaught.bio" (mouseleave)="hoverElement = null" (click)="clickEvent()" [ngClass]="hoverElement === astronaught.bio ? 'astronaught-bio && expand' : 'astronaught-hidden-bio'" [id]="astronaught.id">{{astronaught.bio}}</p>
-        
+<!--           <p (mouseover)="hoverElement = astronaught.bio" (mouseleave)="hoverElement = null" (click)="clickEvent()" [ngClass]="hoverElement === astronaught.bio ? 'astronaught-bio && expand' : 'astronaught-hidden-bio'" [id]="astronaught.id">{{astronaught.bio}}</p>
+ -->        
           
       </div>
     </div>
