@@ -41,10 +41,15 @@ input{
 }
 summary{
   margin-top: 1em;
-  color: #32d0d8;
+  color: white;
+  cursor: pointer;
 }
 details > p{
   margin-top: 1em;
+  background-color: #6E6CEB;
+  padding: 0.5em;
+  box-shadow: 1px 1px 2px #bbbbbb;
+  border-radius: 12px;
 }
 #imgDiv img {
   object-fit: cover;
