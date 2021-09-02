@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  max-width: 100%;
+  z-index: 9999;
+}
+
+.fixed {
+  background-color: #111827e1;
+}
+
+.navbar-content {
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 5rem 1.5rem 5rem;
+  /* box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .2); */
+}
+
+.logo {
+  font-family: "Merienda", cursive;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.nav-list {
+  display: inline-block;
+  margin: 1rem;
+  font-size: 1.2rem;
+}
+
+.nav-link {
+  color: #f9fafb;
+  font-family: "Noto Sans JP", sans-serif;
+  text-decoration: none;
+  font-weight: 500;
+  transition: ease-in-out 350ms;
+}
+
+.nav-link:hover {
+  color: #2563eb;
+}
+
+.wrapper-color .nav-link-logo {
+  line-height: 1;
+  color: transparent;
+  background-image: linear-gradient(to left,
+      #34d399,
+      #fbbf24,
+      #f87171,
+      #818cf8,
+      #f472b6,
+      #60a5fa);
+  background-clip: text;
+  animation: animate 12s linear infinite;
+  background-size: 1000%;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0 100%;
+  }
+
+  50% {
+    background-position: 100% 0%;
+  }
+
+  100% {
+    background-position: 0% 100%;
+  }
+}

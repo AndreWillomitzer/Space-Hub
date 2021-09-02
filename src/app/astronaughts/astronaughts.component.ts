@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, NgModule, OnInit } from '@angular/core';
 import { nextTick } from 'process';
 import { AstronaughtDataService } from '../astronaught-data.service';
+import { SearchPipe } from '../search.pipe';
 @Component({
   selector: 'app-astronaughts',
   templateUrl: './astronaughts.component.html',
@@ -9,33 +10,27 @@ import { AstronaughtDataService } from '../astronaught-data.service';
 export class AstronaughtsComponent implements OnInit {
   astronaughtArray: any;
   astronautAgeArray : any;
+  astroName : string;
+  bioShown : boolean = false;
+  hoverElement : any;
+  timer: any;
   constructor(private asDataService:AstronaughtDataService) { }
-  getAgePart(str) : string {
-    var astroDate = str.split('-')[0];
-    var today = new Date();
-    var year = today.getFullYear();
-    var astroYearOB = astroDate.getFullYear();
-    console.log("Age: ",(year - astroYearOB).toString());
-    return (year - astroYearOB).toString();
+  scrollDiv(elementToScroll:HTMLElement, depl) {
+    elementToScroll.scrollTop -= depl;
+    console.log('scrolling...')
+    this.timer = setTimeout(()=>{
+      this.scrollDiv(elementToScroll, depl)
+    }, 30);
   }
-/*   getAllAges(str) : void{
-    for(var i = 0; i < this.astronaughtArray.length; i++){
-      var currentAge = this.getAgePart((this.astronaughtArray.results[i].date_of_birth).toString());
-      console.log(`Age: ${currentAge}`);
-      this.astronautAgeArray[i] = currentAge;      
-    }
-  } */
+
+  stopTimer(timer:any) {
+    clearTimeout(timer);
+  }
   ngOnInit(): void {
+    this.astroName = '';
     this.asDataService.getAstronaughts().subscribe(data=>{
       this.astronaughtArray = data;
-      console.log("Astronaught data: ", this.astronaughtArray);
-/*       for(var i = 0; i < this.astronaughtArray.length; i++){
-        this.astronautAgeArray[i] = this.getAgePart((this.astronaughtArray.results[i].date_of_birth).toString());
-        console.log(this.astronautAgeArray[i]);
-      } */
-      for(var astronaught of this.astronaughtArray.results){
-        console.log(this.getAgePart((astronaught.date_of_birth).toString()));
-      }      
+      console.log("Astronaught data: ", this.astronaughtArray);    
     });
   }
 

@@ -19,4 +19,7 @@ export class AstronaughtDataService { //class will contain all fetches to API fo
     this.offCounter += 10;
     return this.http.get<any>(`https://lldev.thespacedevs.com/2.2.0/astronaut/`); // maybe need to add a header for application/json
   }
+  searchAstronauts(searchString) : Observable<any>{
+    return this.http.get<any>(`https://lldev.thespacedevs.com/2.2.0/astronaut/`); //maybe don't even need {searchString}, I can filter the other API fetch data?
+  }
 }

@@ -1,0 +1,24 @@
+.hero {
+  text-align: center;
+  position: relative;
+}
+
+.hero img {
+  max-height: 700px;
+  min-height: 700px;
+
+  object-fit: cover;
+  object-position: 50% 75%;
+  filter: brightness(.4);
+}
+
+.hero-middle-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #F9FAFB;
+  font-family: 'Noto Sans JP', sans-serif;
+  letter-spacing: 0.5em;
+  font-size: 2rem;
+}
