@@ -6,7 +6,6 @@
 .hero img {
   max-height: 700px;
   min-height: 700px;
-
   object-fit: cover;
   object-position: 50% 75%;
   filter: brightness(.4);
@@ -21,4 +20,15 @@
   font-family: 'Noto Sans JP', sans-serif;
   letter-spacing: 0.5em;
   font-size: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .hero-middle-content {
+    font-size: 1rem;
+  }
+
+  .hero img {
+    max-height: 400px;
+    min-height: 400px;
+  }
 }
