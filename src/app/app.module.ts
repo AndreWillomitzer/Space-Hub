@@ -15,6 +15,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { HeroComponent } from './hero/hero.component';
 import { LaunchTimerPageComponent } from './launch-timer-page/launch-timer-page.component';
+import { ArticlesComponent } from './articles/articles.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { LaunchTimerPageComponent } from './launch-timer-page/launch-timer-page.
     HomePageComponent,
     HeroComponent,
     LaunchTimerPageComponent,
+    ArticlesComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

@@ -1,4 +1,4 @@
-  <app-hero heroImg='assets/astraunaut-hero.jpg' heroName='ASTRAUNAUGHTS'></app-hero>
+  <app-hero heroImg='assets/astraunaut-hero.jpg' heroName='ASTRONAUTS'></app-hero>
 
   <div id="inputDiv">
     <input type="search" [(ngModel)]=astroName name="SearchPipe" placeholder="Search Astronauts">
@@ -11,9 +11,9 @@
       <!-- <p>{{astronaught.age}}</p> -->
       <div class='card-body'>
         <h3 class="astronaught-name">{{astronaught.name}}</h3>
-        <p>Date of Birth: {{astronaught.date_of_birth | date }}</p>
-        <p>Status: {{astronaught.status.name}}</p>
-        <p>Nationality: {{astronaught.nationality}}</p>
+        <p class="astronaught-dob">Date of Birth: {{astronaught.date_of_birth | date }}</p>
+        <p class="astronaught-status">Status: {{astronaught.status.name}}</p>
+        <p class="astronaught-nation">Nationality: {{astronaught.nationality}}</p>
         <a *ngIf="astronaught.twitter" href="{{astronaught.twitter}}">
           Twitter
         </a>

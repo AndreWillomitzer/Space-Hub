@@ -9,6 +9,7 @@ import { SearchPipe } from '../search.pipe';
 })
 export class AstronaughtsComponent implements OnInit {
   astronaughtArray: any;
+  tempArray: any;
   astronautAgeArray : any;
   astroName : string;
   bioShown : boolean = false;
@@ -29,6 +30,8 @@ export class AstronaughtsComponent implements OnInit {
   ngOnInit(): void {
     this.astroName = '';
     this.asDataService.getAstronaughts().subscribe(data=>{
+      this.tempArray = data['next'];
+      console.log("tempArray (next) value: ", this.tempArray);
       this.astronaughtArray = data;
       console.log("Astronaught data: ", this.astronaughtArray);    
     });

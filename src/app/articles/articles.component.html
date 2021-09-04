@@ -1,0 +1,22 @@
+<app-hero heroImg='assets/article-hero.jpg' heroName='ARTICLES'></app-hero>
+<div class="container" *ngIf="articles else loading">
+    <div *ngFor="let article of articles"  id="astroCard">
+      <div id="imgDiv">
+        <img [src]="article.imageUrl">
+      </div>
+      <!-- <p>{{astronaught.age}}</p> -->
+      <div class='card-body'>
+        <h3 class="article-title">{{article.title}}</h3>
+        <p class="astronaught-dob">Publish Date: {{article.publishedAt | date }}</p>
+        <hr>
+        <p class="article-summary">{{article.summary}}</p>
+            <a [href]="article.url" target="_blank">
+                Click To Read Full Article (You will leave the site!).
+            </a>
+      </div>
+    </div>
+  </div>
+  <ng-template #loading>
+    <div>Loading Astronaughts...</div>
+  </ng-template>
+

@@ -13,12 +13,13 @@
 }
 
 #astroCard {
-  border: 1px #414A6D solid;
+  border: 1px #072828 solid;
   margin: 1.5rem;
   max-width: 250px;
   /* explanation below */
   flex: 1 0 21%;
-  background-color: #414A6D;
+  background-color: #072828;
+  background: rgba(0,0,0,0.25);
 }
 
 .hoverElement {
@@ -34,12 +35,15 @@ input {
   height: 32px;
   width: 400px;
   margin-top: 3em;
-  background-color: #383158;
-  color: white;
+  background-color: #072828;
+  background: rgba(0,0,0,0.25);
+  font-family: 'Mina', sans-serif;
+  color: #00f7f7;
 }
 
 ::placeholder {
   color: white;
+  font-family: 'Mina', sans-serif;
   padding-left: 0.4em;
 }
 
@@ -51,13 +55,12 @@ summary {
   margin-top: 1em;
   color: white;
   cursor: pointer;
+  font-family: 'Mina', sans-serif;
 }
 
 details>p {
   margin-top: 1em;
-  background-color: #6E6CEB;
   padding: 0.5em;
-  box-shadow: 1px 1px 2px #bbbbbb;
   border-radius: 12px;
 }
 
@@ -76,9 +79,9 @@ p {
   font-family: 'Fira Code', monospace;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #2b2b2b;
   /* color: #383158; */
-  color: white;
+  color: #00f7f7;
 }
 
 .card-body {
@@ -124,7 +127,12 @@ p {
   margin-top: 1em;
   color: #32d0d8;
 }
-
+.astronaught-dob, .astronaught-status, .astronaught-nation{
+  color:#00f7f7;
+}
+a {
+  color:inherit;
+}
 /* .tooltip {
   width: 60%;
   visibility: hidden;
