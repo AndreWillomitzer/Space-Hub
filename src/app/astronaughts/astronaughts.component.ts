@@ -30,8 +30,7 @@ export class AstronaughtsComponent implements OnInit {
   ngOnInit(): void {
     this.astroName = '';
     this.asDataService.getAstronaughts().subscribe(data=>{
-      this.tempArray = data['next'];
-      console.log("tempArray (next) value: ", this.tempArray);
+      //maybe need astronaughtArray.push(data.next(1)) etc instead of just 'data'?
       this.astronaughtArray = data;
       console.log("Astronaught data: ", this.astronaughtArray);    
     });
