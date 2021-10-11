@@ -1,27 +1,18 @@
-# SpaceHub
+# About Us
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.1.
+**Hello, my name is Andre Willomitzer, and my partner in this project is Kevan Yang! We are students at Seneca College in Toronto, Canada. This project is a passion of ours and we decided to build it together to have a space website for news and learning about different astronauts. It is also nice to be able to share it with others who are also interested in seeing space imagery and learning about it.**
 
-## Development server
+# SpaceHub UI
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+![Astronaut Page](./astronaut_cards.png)
 
-## Code scaffolding
+![Astronaut Search](./search_2.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![Astronaut Page](./articles_page.png)
+![Astronaut Page](./recent_articles.png)
 
-## Build
+## To run the project
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+To run the project, download the source code and run npm install. Then, type ng serve --open in your command line.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
